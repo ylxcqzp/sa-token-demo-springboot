@@ -54,6 +54,5 @@ public class WebSocketController {
         }catch (IOException e) {
             e.printStackTrace();
         }
-        log.debug("deas");
     }
 }
