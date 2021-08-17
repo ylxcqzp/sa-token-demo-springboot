@@ -18,8 +18,9 @@ sa-token:
   is-log: false
 
 
-#redis配置
+
 spring:
+#redis配置
   redis:
     host: 23.105.202.135
     port: 6379
@@ -30,11 +31,15 @@ spring:
         max-idle: 20
         min-idle: 2
     password: qq123456
+
+#mysql配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test
+    url: jdbc:mysql://23.105.202.135:3306/test
     username: root
     password: qq123456
 
-#mysql配置
+
+
+
 

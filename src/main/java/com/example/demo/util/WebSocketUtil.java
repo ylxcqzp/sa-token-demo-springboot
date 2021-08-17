@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author qzp
- * @Description: todo
+ * @Description: webSocket工具类
  * @date 2021/7/27 15:16
  */
 public class WebSocketUtil {
@@ -36,9 +36,7 @@ public class WebSocketUtil {
 
     //给所有在线用户发送消息
     public static void sendMessageForAll(String message) {
-        ONLINE_SESSION.forEach((sessionId,session) -> {
-            sendMessage(session,message);
-        });
+        ONLINE_SESSION.forEach((sessionId,session) -> sendMessage(session,message));
     }
 
     public static long getCount(){
