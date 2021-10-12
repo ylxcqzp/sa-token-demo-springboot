@@ -5,6 +5,7 @@ import cn.dev33.satoken.stp.StpUtil;
 import com.example.demo.annotation.AccessLimit;
 import com.example.demo.util.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;

@@ -19,9 +19,9 @@ public class RestExceptionHandle {
      * @return resultData
      */
     @ExceptionHandler(Exception.class)
-    public ResultData<String> exception(Exception e) {
+    public CommonResult<String> exception(Exception e) {
         log.error("捕获到异常信息：{}",e.getMessage());
-        return ResultData.fail(ReturnCode.RC500.getCode(),e.getMessage());
+        return CommonResult.fail(ReturnCode.RC500.getCode(),e.getMessage());
     }
 
 }

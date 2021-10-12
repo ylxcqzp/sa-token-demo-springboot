@@ -1,19 +1,19 @@
 package com.example.demo.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.demo.entity.Book;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.QueryByExampleExecutor;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
 /**
  * @author qzp
  * @Description: todo
- * @date 2021/7/26 11:52
+ * @date 2021/10/12 15:33
  */
-public interface BookService extends CrudRepository<Book,Integer> , QueryByExampleExecutor<Book> {
-    
+public interface BookService extends IService<Book> {
     List<Book> findByName(String name);
 
-    List<Book> findByDescription(String description);
+    IPage<Book> findListByPriceRange(Double lowPrice, Double highPrice, Integer pageNum, Integer pageSize);
 }

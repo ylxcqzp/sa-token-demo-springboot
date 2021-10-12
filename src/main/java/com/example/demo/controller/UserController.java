@@ -1,7 +1,9 @@
 package com.example.demo.controller;
 
 import cn.dev33.satoken.stp.StpUtil;
+import cn.hutool.core.util.StrUtil;
 import com.example.demo.annotation.CustomerLog;
+import io.netty.util.internal.StringUtil;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +19,7 @@ public class UserController {
             StpUtil.login(1001);
             return "登录成功";
         }
+
         return "登录失败";
     }
 
