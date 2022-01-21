@@ -18,7 +18,7 @@ import java.io.IOException;
 //直接替换成@ServerEndpoint即可，作用是一样的 就是指定一个地址
 //表示定义一个websocket的Server端
 @ServerEndpoint(value = "/socket/{nickName}")
-@Component
+//@Component
 @Slf4j
 public class WebSocketController {
 

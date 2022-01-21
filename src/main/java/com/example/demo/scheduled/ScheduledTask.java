@@ -20,7 +20,7 @@ public class ScheduledTask {
      * 五秒执行一次
      */
     @Async("scheduledPoolTaskExecutor")
-    @Scheduled(fixedRate = 5000)
+    //@Scheduled(fixedRate = 5000)
     public void getCurrentDate() {
         log.info("Scheduled定时任务执行，当前时间： {}", LocalDateTime.now());
     }

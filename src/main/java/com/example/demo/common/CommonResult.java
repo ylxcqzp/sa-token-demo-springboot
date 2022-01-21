@@ -11,7 +11,7 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 public class CommonResult<T> {
-    private int status;
+    private int code;
 
     private String message;
 
@@ -25,21 +25,29 @@ public class CommonResult<T> {
 
     public static <T> CommonResult<T> success(String message) {
         CommonResult<T> commonResult = new CommonResult<>();
-        commonResult.setStatus(ReturnCode.RC100.getCode());
+        commonResult.setCode(ReturnCode.RC200.getCode());
         commonResult.setMessage(message);
         return commonResult;
     }
 
     public static <T> CommonResult<T> success() {
         CommonResult<T> commonResult = new CommonResult<>();
-        commonResult.setStatus(ReturnCode.RC100.getCode());
+        commonResult.setCode(ReturnCode.RC200.getCode());
         commonResult.setMessage("操作成功");
+        return commonResult;
+    }
+
+    public static <T> CommonResult<T> success(T t,String message) {
+        CommonResult<T> commonResult = new CommonResult<>();
+        commonResult.setData(t);
+        commonResult.setCode(ReturnCode.RC200.getCode());
+        commonResult.setMessage(message);
         return commonResult;
     }
 
     public static <T> CommonResult<T> fail(int code, String message) {
         CommonResult<T> commonResult = new CommonResult<>();
-        commonResult.setStatus(code);
+        commonResult.setCode(code);
         commonResult.setMessage(message);
         return commonResult;
     }
