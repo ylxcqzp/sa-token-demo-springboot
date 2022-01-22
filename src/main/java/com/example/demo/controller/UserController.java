@@ -36,7 +36,6 @@ public class UserController {
         return CommonResult.success(token,"登录成功！");
     }
 
-
     @GetMapping("/logout")
     public CommonResult<Object> logout(HttpServletRequest request) {
         StpUtil.logout();
