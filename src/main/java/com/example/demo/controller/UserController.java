@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 public class UserController {
 
+
     @RequestMapping("/doLogin")
     @CustomerLog(value = "访问登录接口")
     public String doLogin(String username,String password){
